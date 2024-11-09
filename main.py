@@ -18,6 +18,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
     parser.add_argument("--excludeTeams", help="VCU,ARMY,etc")
+    parser.add_argument("--excludePlayers", help="fanduel ids")
     parser.add_argument("--requireOdds", help="Error out if unable to retreive odds for a team")
     parser.add_argument("--noise", type=int, help="Add noise to expected points, int")
 
@@ -27,6 +28,10 @@ if __name__ == '__main__':
 
     if args.excludeTeams is not None:
         fanduel.setExcludedTeams(args.excludeTeams.split(","))
+
+    excludedPlayers = []
+    if args.excludePlayers is not None:
+        excludedPlayers = args.excludePlayers.split(",")
 
     player_data = fanduel.load('./data/players.csv')
 
@@ -43,6 +48,8 @@ if __name__ == '__main__':
         predict.setRequireOdds(False)
     pts = predict.predict()
 
+
+
     entries = FanduelEntry()
 
     while True:
@@ -53,7 +60,7 @@ if __name__ == '__main__':
             ptsToUse = list(map(lambda x: x + np.random.uniform(-1 * args.noise, args.noise), ptsToUse))
 
         linearOpt = LinearOptimization()
-        linearOpt.load(names, ids, positions, salaries, ptsToUse, teams)
+        linearOpt.load(names, ids, positions, salaries, ptsToUse, teams, excludedPlayers)
         guards, forwards, util = linearOpt.solve()
 
         add = input("Add this lineup? Y/N")

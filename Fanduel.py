@@ -115,6 +115,12 @@ class FanDuel:
     'fanduel': '{fanduelId}', # {firstName} {lastName} {team}
     'cbs': '{row[playerIdNdx]}' # {cbsFullName}
 }},""")
+
+                shouldAdd = input("Add mapping? Y/N")
+                if shouldAdd == "Y" or shouldAdd == "y":
+                    PlayerMappings.add(fanduelId, row[playerIdNdx])
+                    PlayerMappings.save()
+
                 break
 
         return None

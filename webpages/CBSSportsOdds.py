@@ -40,7 +40,11 @@ class CBSSportsOdds:
         over = float(over[1:])
 
         odds = tds[1].findAll(class_="game-odds")[1].getText()
-        odds = float(odds.strip())
+
+        if (odds.strip() == "PK"):
+            odds = 0
+        else:
+            odds = float(odds.strip())
 
         return {
             "homeTeam": self.parseHref(homeTeam),
