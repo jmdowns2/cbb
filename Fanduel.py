@@ -112,8 +112,8 @@ class FanDuel:
 
             if cbsName == lastName and cbsFullName[0] == firstName[0]:
                 print(f"""{{
-    'fanduel': '{fanduelId}', # {firstName} {lastName} {team}
-    'cbs': '{row[playerIdNdx]}' # {cbsFullName}
+    'fanduel': '{fanduelId}',\t # {firstName} {lastName} {team}
+    'cbs': '{row[playerIdNdx]}'\t\t # {cbsFullName}
 }},""")
 
                 shouldAdd = input("Add mapping? Y/N")
@@ -122,6 +122,11 @@ class FanDuel:
                     PlayerMappings.save()
 
                 break
+
+        print(f'''{{
+    "fanduel": "{fanduelId}", \t  # {firstName} {lastName} {team}
+    "cbs": ""
+}},''')
 
         return None
 

@@ -100,6 +100,110 @@ mappings = [
         'fanduel': 'RICE',
         'cbs': 'RICE'
     },
+    {
+        'fanduel': 'FAU',
+        'cbs': 'FAU'
+    },
+    {
+        'fanduel': 'JOES',
+        'cbs': 'STJOES'
+    },
+    {
+        'fanduel': 'MSU',
+        'cbs': 'MICHST'
+    },
+    {
+        'fanduel': 'NOVA',
+        'cbs': 'NOVA'
+    },
+    {
+        'fanduel': 'UK',
+        'cbs': 'UK'
+    },
+    {
+        'fanduel': 'ALA',
+        'cbs': 'BAMA'
+    },
+    {
+        'fanduel': 'ARIZ',
+        'cbs': 'ARIZ'
+    },
+    {
+        'fanduel': 'BUT',
+        'cbs': 'BUTLER'
+    },
+    {
+        'fanduel': 'MARQ',
+        'cbs': 'MARQET'
+    },
+    {
+        'fanduel': 'MD',
+        'cbs': 'MD'
+    },
+    {
+        'fanduel': 'MICH',
+        'cbs': 'MICH'
+    },
+    {
+        'fanduel': 'PSU',
+        'cbs': 'PSU'
+    },
+    {
+        'fanduel': 'PURD',
+        'cbs': 'PURDUE'
+    },
+    {
+        'fanduel': 'SMU',
+        'cbs': 'SMU'
+    },
+    {
+        'fanduel': 'TCU',
+        'cbs': 'TCU'
+    },
+    {
+        'fanduel': 'VT',
+        'cbs': 'VATECH'
+    },
+    {
+        'fanduel': 'WIS',
+        'cbs': 'WISC'
+    },
+    {
+        'fanduel': 'CSU',
+        'cbs': 'COLOST'
+    },
+    {
+        'fanduel': 'GTWN',
+        'cbs': 'GTOWN'
+    },
+    {
+        'fanduel': 'IND',
+        'cbs': 'IND'
+    },
+    {
+        'fanduel': 'MISS',
+        'cbs': 'MISS'
+    },
+    {
+        'fanduel': 'ND',
+        'cbs': 'ND'
+    },
+    {
+        'fanduel': 'SCAR',
+        'cbs': 'SC'
+    },
+    {
+        'fanduel': 'WAKE',
+        'cbs': 'WAKE'
+    },
+    {
+        'fanduel': 'WOFF',
+        'cbs': 'WOFF'
+    },
+    {
+        'fanduel': 'XAV',
+        'cbs': 'XAVIER'
+    },
 
     # {
     #     'fanduel': '',

@@ -4,6 +4,7 @@ import numpy as np
 class LinearOptimization:
 
     def __init__(self):
+        self.usePlayers = None
         self.teams = None
         self.is_f = None
         self.is_g = None
@@ -26,6 +27,9 @@ class LinearOptimization:
 
         self.teams = teams
 
+    def setUsePlayers(self, players):
+        self.usePlayers = list(map(lambda x: x in players, self.ids))
+
     def solve(self):
         prob = pulp.LpProblem("FantasyFootballLineup", pulp.LpMaximize)
 
@@ -40,6 +44,7 @@ class LinearOptimization:
         prob += pulp.lpSum(self.is_f[i] * player_vars[i] for i in range(len(self.is_f))) >= 3
 
         prob += pulp.lpSum(self.excludedPlayers[i] * player_vars[i] for i in range(len(self.is_f))) == 0
+        prob += pulp.lpSum(self.usePlayers[i] * player_vars[i] for i in range(len(self.usePlayers))) == sum(self.usePlayers)
 
         prob.solve()
         print("Status:", pulp.LpStatus[prob.status])
