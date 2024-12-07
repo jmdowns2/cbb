@@ -11,15 +11,17 @@ class PlayerMappings:
     def fanduel_to_cbs(fanDuelId):
         PlayerMappings.ensureMappings()
 
+        playerId = fanDuelId.split("-")[1]
+
         for mapping in PlayerMappings.mappings:
-            if mapping["fanduel"] == fanDuelId:
+            if mapping["fanduel"] == playerId:
                 return mapping["cbs"]
 
         return None
 
     @staticmethod
     def add(fanduelId, cbsId):
-        PlayerMappings.mappings.append({ "fanduel": fanduelId, "cbs": cbsId})
+        PlayerMappings.mappings.append({ "fanduel": PlayerMappings.stripFanduelId(fanduelId), "cbs": cbsId})
 
     @staticmethod
     def ensureMappings():
@@ -35,3 +37,8 @@ class PlayerMappings:
     def save():
         with open("./mappings/player_mappings.json", 'w', encoding='utf-8') as f:
             json.dump(PlayerMappings.mappings, f, ensure_ascii=False, indent=2)
+
+
+    @staticmethod
+    def stripFanduelId(fanduel):
+        return fanduel.split("-")[1]

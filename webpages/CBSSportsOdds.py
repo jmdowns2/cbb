@@ -16,7 +16,11 @@ class CBSSportsOdds:
         odds = []
 
         for row in rows:
-            odds.append(self.parseRow(row))
+            try:
+                odds.append(self.parseRow(row))
+            except:
+                print("unable to parse odds")
+
 
         self.gameOdds = list(filter(lambda x: x is not None, odds))
 

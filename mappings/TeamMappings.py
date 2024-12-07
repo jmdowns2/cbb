@@ -204,6 +204,122 @@ mappings = [
         'fanduel': 'XAV',
         'cbs': 'XAVIER'
     },
+    {
+        'fanduel': 'CLEM',
+        'cbs': 'CLEM'
+    },
+    {
+        'fanduel': 'ISU',
+        'cbs': 'IOWAST'
+    },
+    {
+        'fanduel': 'SF',
+        'cbs': 'SANFRAN'
+    },
+    {
+        'fanduel': 'RUT',
+        'cbs': 'RUT'
+    },
+    {
+        'fanduel': 'COLO',
+        'cbs': 'COLO'
+    },
+    {
+        'fanduel': 'LOU',
+        'cbs': 'LVILLE'
+    },
+    {
+        'fanduel': 'MINN',
+        'cbs': 'MINN'
+    },
+    {
+        'fanduel': 'WICH',
+        'cbs': 'WICHST'
+    },
+    {
+        'fanduel': 'BYU',
+        'cbs': 'BYU'
+    },
+    {
+        'fanduel': 'DAV',
+        'cbs': 'DAVID'
+    },
+    {
+        'fanduel': 'NCST',
+        'cbs': 'NCST'
+    },
+    {
+        'fanduel': 'OU',
+        'cbs': 'OKLA'
+    },
+    {
+        'fanduel': 'PITT',
+        'cbs': 'PITT'
+    },
+    {
+        'fanduel': 'CIN',
+        'cbs': 'CINCY'
+    },
+    {
+        'fanduel': 'IOWA',
+        'cbs': 'IOWA'
+    },
+    {
+        'fanduel': 'LSU',
+        'cbs': 'LSU'
+    },
+    {
+        'fanduel': 'MIA',
+        'cbs': 'MIAMI'
+    },
+    {
+        'fanduel': 'PROV',
+        'cbs': 'PROV'
+    },
+    {
+        'fanduel': 'UGA',
+        'cbs': 'UGA'
+    },
+    {
+        'fanduel': 'CONN',
+        'cbs': 'UCONN'
+    },
+    {
+        'fanduel': 'CRE',
+        'cbs': 'CREIGH'
+    },
+    {
+        'fanduel': 'MSST',
+        'cbs': 'MISSST'
+    },
+    {
+        'fanduel': 'UVA',
+        'cbs': 'UVA'
+    },
+    {
+        'fanduel': 'ILL',
+        'cbs': 'ILL'
+    },
+    {
+        'fanduel': 'CAL',
+        'cbs': 'CAL'
+    },
+    {
+        'fanduel': 'GT',
+        'cbs': 'GATECH'
+    },
+    {
+        'fanduel': 'NEB',
+        'cbs': 'NEB'
+    },
+    {
+        'fanduel': 'STAN',
+        'cbs': 'STNFRD'
+    },
+    {
+        'fanduel': 'SYR',
+        'cbs': 'CUSE'
+    },
 
     # {
     #     'fanduel': '',

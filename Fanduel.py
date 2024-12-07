@@ -27,6 +27,8 @@ class FanDuel:
         for excludedTeam in self.excludedTeams:
             self.removeTeam(excludedTeam)
 
+        self.removeInjured();
+
         self.validateTeamMappings()
         self.validatePlayers()
         return self.data
@@ -35,6 +37,12 @@ class FanDuel:
         teamNdx = self.getHeaderNdx("Team")
         for i in reversed(range(len(self.data))):
             if self.data[i][teamNdx] == team:
+                self.data = np.delete(self.data, i, axis=0)
+
+    def removeInjured(self):
+        injuredNdx = self.getHeaderNdx("Injury Indicator")
+        for i in reversed(range(len(self.data))):
+            if self.data[i][injuredNdx] == "o":
                 self.data = np.delete(self.data, i, axis=0)
 
 
